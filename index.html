@@ -33,18 +33,6 @@
         .container {
             max-width: 1400px;
         }
-        /* Style for anchor links on article page */
-        .on-this-page a.active {
-            color: white;
-            font-weight: 600;
-        }
-        .on-this-page a {
-            color: #e0e0e0;
-            transition: color 0.2s;
-        }
-        .on-this-page a:hover {
-            color: #fff;
-        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -53,12 +41,9 @@
         <!-- Navigation Bar -->
         <header class="flex items-center justify-between py-4 border-b border-gray-700/50">
             <div class="flex items-center space-x-2">
-                <!-- Euphoria Logo with SVG -->
-                <a href="#" class="flex items-center space-x-2" onclick="showPage('home')">
-                    <!-- Simple Star SVG for logo -->
-                    <svg class="h-6 w-6 glow-icon" fill="white" viewBox="0 0 24 24">
-                        <path d="M12 2l2.4 7.2h7.6l-6.2 4.6 2.4 7.2-6.2-4.6-6.2 4.6 2.4-7.2-6.2-4.6h7.6z"/>
-                    </svg>
+                <!-- Euphoria Logo with new image -->
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="https://cdn.discordapp.com/attachments/1374644669408874536/1410561201850810499/1752389126033_1.png?ex=68b176fd&is=68b0257d&hm=331ad26e267f36fd9440417641f330d618deefa3e497ff82a7a9f766ec9f671f&" onerror="this.src='https://placehold.co/100x100/2a2a47/e0e0e0?text=Logo+Error'" alt="Euphoria Logo" class="h-20 w-20 rounded-full border border-gray-700/50 object-cover glow-icon">
                     <span class="text-3xl font-bold text-white glow-text">Euphoria</span>
                 </a>
             </div>
@@ -79,12 +64,10 @@
         </header>
 
         <!-- Home Page Content -->
-        <main id="homePage" class="mt-8 transition-opacity duration-300 opacity-100 block">
+        <main class="mt-8 transition-opacity duration-300 opacity-100 block">
             <div class="flex flex-col items-center text-center py-16">
                 <!-- Large Central Icon -->
-                <svg class="w-24 h-24 glow-icon mb-4" fill="white" viewBox="0 0 24 24">
-                    <path d="M12 2l2.4 7.2h7.6l-6.2 4.6 2.4 7.2-6.2-4.6-6.2 4.6 2.4-7.2-6.2-4.6h7.6z"/>
-                </svg>
+                <img src="https://cdn.discordapp.com/attachments/1374644669408874536/1410561201850810499/1752389126033_1.png?ex=68b176fd&is=68b0257d&hm=331ad26e267f36fd9440417641f330d618deefa3e497ff82a7a9f766ec9f671f&" onerror="this.src='https://placehold.co/100x100/2a2a47/e0e0e0?text=Logo+Error'" alt="Euphoria Logo" class="w-48 h-48 rounded-full border border-gray-700/50 object-cover glow-icon mb-4">
                 <h1 class="text-4xl sm:text-5xl font-extrabold text-white glow-text">Euphoria</h1>
                 <p class="mt-2 text-xl font-medium text-gray-400">Editing Resources.</p>
                 <!-- Button row -->
@@ -99,182 +82,32 @@
             <!-- Content Cards Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 pb-12">
                 <!-- Example Card -->
-                <a href="#" onclick="showPage('article')" class="block bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
+                <a href="/windows-article" class="block bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
                     <h2 class="text-2xl font-semibold">Windows</h2>
                     <p class="mt-2 text-gray-400">Software & plugins.</p>
                 </a>
-                <div class="bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
+                <a href="/macos-article" class="block bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
                     <h2 class="text-2xl font-semibold">MacOS</h2>
                     <p class="mt-2 text-gray-400">Software & plugins.</p>
-                </div>
-                <div class="bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
+                </a>
+                <a href="/extensions-article" class="block bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
                     <h2 class="text-2xl font-semibold">Extensions</h2>
                     <p class="mt-2 text-gray-400">Extensions & scripts.</p>
-                </div>
-                <div class="bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
+                </a>
+                <a href="/beginners-guide" class="block bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
                     <h2 class="text-2xl font-semibold">Beginners Guide</h2>
                     <p class="mt-2 text-gray-400">Everything you need to know as a new editor for After Effects.</p>
-                </div>
-                <div class="bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
+                </a>
+                <a href="/adobe-fix" class="block bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
                     <h2 class="text-2xl font-semibold">Adobe Ungenuine Popup Fix</h2>
                     <p class="mt-2 text-gray-400">Remove the infamous "Adobe Genuine Service" popup.</p>
-                </div>
-                <div class="bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
+                </a>
+                <a href="/websites" class="block bg-card rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg border border-gray-700/50">
                     <h2 class="text-2xl font-semibold">Helpful Websites</h2>
                     <p class="mt-2 text-gray-400">Resources for editors - containing guides, tools, fonts, downloaders & more.</p>
-                </div>
-            </div>
-        </main>
-
-        <!-- Article Page Content (initially hidden) -->
-        <main id="articlePage" class="mt-8 transition-opacity duration-300 opacity-0 hidden">
-            <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr_280px] gap-8">
-                <!-- Left Sidebar -->
-                <aside class="bg-card rounded-xl p-6 shadow-lg border border-gray-700/50">
-                    <nav>
-                        <ul class="space-y-4">
-                            <!-- Resources Section -->
-                            <li>
-                                <h3 class="font-bold text-gray-300 mb-2">Resources</h3>
-                                <ul class="space-y-1">
-                                    <li><a href="#" class="text-accent">Windows</a></li>
-                                    <li><a href="#" class="hover:text-white">MacOS</a></li>
-                                    <li><a href="#" class="hover:text-white">Extensions</a></li>
-                                </ul>
-                            </li>
-                            <!-- Guides Section -->
-                            <li>
-                                <h3 class="font-bold text-gray-300 mb-2">Guides</h3>
-                                <ul class="space-y-1">
-                                    <li><a href="#" class="hover:text-white">Beginners Guide</a></li>
-                                    <li><a href="#" class="hover:text-white">Adobe Ungenuine Popup Fix</a></li>
-                                    <li><a href="#" class="hover:text-white">Maxon Troubleshoot Guide</a></li>
-                                    <li><a href="#" class="hover:text-white">Switching After Effect Versions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </aside>
-
-                <!-- Main Article Content -->
-                <article class="bg-card rounded-xl p-8 shadow-lg border border-gray-700/50">
-                    <h1 class="text-4xl font-extrabold text-white mb-4" id="article-start">Windows</h1>
-                    <p class="text-gray-300 mb-6">Having a brain, <span class="text-white font-semibold">attention to detail</span> and some cognitive thinking is required. You will need an understanding of your system to do this.</p>
-                    
-                    <!-- Read Me Section -->
-                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700/50 mb-8">
-                        <h2 class="text-xl font-bold mb-2 text-white">READ ME</h2>
-                        <ul class="list-disc list-inside space-y-1 text-gray-300">
-                            <li>You must install <a href="#" class="text-accent hover:underline">7-Zip</a> or an alternative software in order to open our files.</li>
-                            <li>Our files are encrypted with a <span class="text-white font-semibold">password</span>, which can only be found in our <a href="#" class="text-accent hover:underline">Discord Server</a>.</li>
-                            <li>Bypass Pixelrdrain download limits: <a href="https://pixelrdrain-bypass.cybar.xyz/" target="_blank" class="text-accent hover:underline">https://pixelrdrain-bypass.cybar.xyz/</a></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Software Section -->
-                    <h2 class="text-2xl font-bold mb-4 text-white" id="software"><i class="fa-solid fa-star text-yellow-400 mr-2"></i>Software</h2>
-                    <div class="space-y-6">
-                        <!-- After Effects Sub-section -->
-                        <div class="mb-4">
-                            <h3 class="text-xl font-bold mb-2 text-white">After Effects</h3>
-                            <ul class="space-y-1 text-gray-300">
-                                <li><a href="#" class="text-accent hover:underline">After Effects 2025.4</a> / 2</li>
-                                <li><a href="#" class="text-accent hover:underline">After Effects 2024.5</a> / 2</li>
-                                <li><a href="#" class="text-accent hover:underline">After Effects 2023.2</a> / 2</li>
-                                <li><a href="#" class="text-accent hover:underline">After Effects 2021 (v18.0)</a> / 2</li>
-                                <li><a href="#" class="text-accent hover:underline">After Effects 2020 (v17.7)</a> / 2</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Media Encoder Sub-section -->
-                        <div class="mb-4">
-                            <h3 class="text-xl font-bold mb-2 text-white">Media Encoder</h3>
-                            <ul class="space-y-1 text-gray-300">
-                                <li><a href="#" class="text-accent hover:underline">Media Encoder 2025.4</a> / 2</li>
-                                <li><a href="#" class="text-accent hover:underline">Media Encoder 2024.5</a> / 2</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- More sections... -->
-                        <div class="mb-4">
-                            <h3 class="text-xl font-bold mb-2 text-white">Premiere Pro</h3>
-                            <p class="text-gray-300">Content for Premiere Pro here...</p>
-                        </div>
-                        <div class="mb-4">
-                            <h3 class="text-xl font-bold mb-2 text-white">Photoshop</h3>
-                            <p class="text-gray-300">Content for Photoshop here...</p>
-                        </div>
-                        <div class="mb-4">
-                            <h3 class="text-xl font-bold mb-2 text-white" id="plugins">Adobe Plugins</h3>
-                            <p class="text-gray-300">Content for Adobe Plugins here...</p>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Right Sidebar -->
-                <aside class="hidden lg:block bg-card rounded-xl p-6 shadow-lg border border-gray-700/50 self-start sticky top-6">
-                    <nav class="on-this-page">
-                        <h3 class="font-bold text-gray-300 mb-4">On this page</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="#software" class="flex items-center hover:text-white"><i class="fa-solid fa-star text-yellow-400 mr-2"></i>Software</a></li>
-                            <li><a href="#plugins" class="flex items-center hover:text-white"><i class="fa-solid fa-star text-yellow-400 mr-2"></i>Adobe Plugins</a></li>
-                            <li><a href="#article-start" class="hover:text-white">Back to top</a></li>
-                        </ul>
-                    </nav>
-                </aside>
+                </a>
             </div>
         </main>
     </div>
-
-    <script>
-        // Function to toggle between home and article pages
-        function showPage(pageId) {
-            const homePage = document.getElementById('homePage');
-            const articlePage = document.getElementById('articlePage');
-            if (pageId === 'home') {
-                homePage.classList.remove('hidden', 'opacity-0');
-                homePage.classList.add('block', 'opacity-100');
-                articlePage.classList.remove('block', 'opacity-100');
-                articlePage.classList.add('hidden', 'opacity-0');
-            } else if (pageId === 'article') {
-                homePage.classList.remove('block', 'opacity-100');
-                homePage.classList.add('hidden', 'opacity-0');
-                articlePage.classList.remove('hidden', 'opacity-0');
-                articlePage.classList.add('block', 'opacity-100');
-            }
-        }
-    
-        // Keyboard shortcut for search (Ctrl+K)
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.key === 'k') {
-                e.preventDefault();
-                document.getElementById('searchInput').focus();
-            }
-        });
-
-        // Add active class to 'On this page' links based on scroll position
-        const sections = document.querySelectorAll('h2, h3');
-        const navLinks = document.querySelectorAll('.on-this-page a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 100) { // Adjust offset as needed
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === `#${current}`) {
-                    a.classList.add('active');
-                }
-            });
-        });
-
-        // Initial check to show the home page by default
-        window.onload = () => showPage('home');
-    </script>
 </body>
 </html>
